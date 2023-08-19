@@ -27,9 +27,11 @@ const [pokemnList, setPokemonList] = useState([])
     downloadPoekmon()
   }, [])
   return (
-    <div className='pokemon-list-container'>
+    <div className='pokemonList-container'>
       <h2>Pokemon</h2>
+      <div className="pokemon-lists">
       {pokemnList.map((pokemon) => <Pokemon key={pokemon.id} name={pokemon.name} url={pokemon.image}/>)}
+      </div>
     </div>
   )
 }
