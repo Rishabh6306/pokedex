@@ -1,3 +1,4 @@
+/* Styles for the wrapper containing the entire Pokedex */
 .pokedex-wrapper {
     display: flex;
     flex-direction: column;
@@ -5,8 +6,8 @@
     margin: 2rem 0;
 }
 
+/* Styles for the Pokedex title */
 .pokedex-wrapper h1 {
     letter-spacing: 10px;
     font-size: 2.4rem;
 }
-

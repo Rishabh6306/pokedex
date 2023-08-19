@@ -1,5 +1,6 @@
-#serch-pokemon {
-    width: 60%;
-    padding: 2rem;
-    margin: 2rem 0;
+/* Styles for the search input */
+#search-pokemon {
+    width: 60%; /* Set the width of the input */
+    padding: 2rem; /* Add padding to the input */
+    margin: 2rem 0; /* Add margin above and below the input */
 }

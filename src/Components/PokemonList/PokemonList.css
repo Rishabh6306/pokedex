@@ -1,15 +1,18 @@
+/* Styles for the container holding the Pokemon list */
 .pokemonList-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Styles for the list of Pokemon */
 .pokemon-lists {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
+/* Styles for the pagination controls */
 .page-controls button {
     background-color: salmon;
     padding: 15px 2rem;
@@ -21,6 +24,7 @@
     margin-top: 2em;
 }
 
+/* Hover effect for pagination buttons */
 .page-controls button:hover {
     background-color: sandybrown;
 }
