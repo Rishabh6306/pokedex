@@ -17,6 +17,8 @@
     font-weight: bolder;
     margin-left: 1rem;
    border: none;
+   font-size: 1rem;
+   margin-top: 2em;
 }
 
 .page-controls button:hover {
