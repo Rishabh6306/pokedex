@@ -9,3 +9,16 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+.page-controls button {
+    background-color: salmon;
+    padding: 15px 2rem;
+    border-radius: 14px;
+    font-weight: bolder;
+    margin-left: 1rem;
+   border: none;
+}
+
+.page-controls button:hover {
+    background-color: sandybrown;
+}

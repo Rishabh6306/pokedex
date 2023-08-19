@@ -28,7 +28,11 @@ const [pokemnList, setPokemonList] = useState([])
   }, [])
   return (
     <div className='pokemonList-container'>
-      <h2>Pokemon</h2>
+      <h1 className='pokemon-heading'>Pokemon List</h1>
+      <div className="page-controls">
+        <button>Previous</button>
+        <button>Next</button>
+      </div>
       <div className="pokemon-lists">
       {pokemnList.map((pokemon) => <Pokemon key={pokemon.id} name={pokemon.name} url={pokemon.image}/>)}
       </div>

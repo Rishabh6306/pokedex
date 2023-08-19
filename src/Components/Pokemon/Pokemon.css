@@ -12,7 +12,7 @@
 
 .pokemon-container:hover {
     background-color: burlywood;
-    flex-basis: 30.6%;
+    scale: 1.04;
 }
 
 .pokemon-image {

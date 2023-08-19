@@ -7,7 +7,7 @@ function Pokedex() {
   return (
     <>
       <div className='pokedex-wrapper'>
-        <h1>Poledex</h1>
+        <h1>POKEDEX</h1>
         <Search />
         <PokemonList/>
       </div>
