@@ -1,4 +1,3 @@
-/* Reset default margin, padding, outline, and box-sizing for all elements */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +5,9 @@
     box-sizing: border-box;
 }
 
-/* Styles for the entire body */
+/* Set the background color for the entire body */
 body {
-    background-color: blanchedalmond; /* Set the background color */
+    background-color: blanchedalmond; /* Use the "blanchedalmond" color for the background */
+    overflow-x: hidden;
+    margin: 40px 0;
 }

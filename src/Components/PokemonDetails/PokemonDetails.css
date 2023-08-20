@@ -1,59 +1,77 @@
-/* Styles for the container holding Pokemon details */
-.pokemon-detail-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-}
-
-/* Styles for the heading */
-h1 {
-    margin: 30px 30px 0 30px;
-}
-
-/* Styles for the home icon link */
-.home-icon {
+/* Styling for the redirect message in the Pokedex */
+.pokedex-redirect {
+    margin: 30px 30px 10px 30px;
     text-decoration: none;
 }
 
-/* Hover effect for the home icon link */
-.home-icon:hover {
+.pokedex-redirect:hover {
     text-decoration: underline;
 }
 
-/* Styles for the Pokemon name */
-.pokemon-name {
-    letter-spacing: 1rem;
-    font-size: xx-large;
-    text-transform: capitalize;
+/* Styling for the wrapper of Pokemon details */
+.pokemon-details-wrapper {
+    display: flex; /* Use flex display for flexible layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally within the wrapper */
+    justify-content: center; /* Center children vertically within the wrapper */
+    gap: 2rem; /* Add gap between children */
 }
 
-/* Styles for the Pokemon image */
-.pokemon-detail-container img {
-    width: 20vw;
-    border: 1px solid gold;
-    border-radius: 14px;
+/* Styling for the name of the Pokemon detail */
+.pokemon-detail-name {
+    font-size: xx-large; /* Set extra large font size */
+    letter-spacing: 2rem; /* Add spacing between characters */
+    text-transform: capitalize; /* Captilize the name */
 }
 
-/* Styles for the Pokemon attributes */
-.pokemon-atr {
-    display: flex;
-    font-size: xx-large;
-    gap: 2rem;
+/* Styling for Pokemon attributes */
+.pokemon-attr {
+    display: flex; /* Use flex display for flexible layout */
+    font-size: xx-large; /* Set extra large font size */
+    gap: 2rem; /* Add gap between items */
 }
 
-/* Styles for the Pokemon types */
-.pokemon-type {
-    display: flex;
-    gap: 10px;
-    font-size: xx-large;
-}
-
-/* Styles for each type element */
+/* Styling for the type of Pokemon */
 .type {
-    border: 1px solid gray;
-    padding: 1rem 2rem;
-    border-radius: 10px;
-    background-color: azure;
+    font-size: x-large; /* Set large font size */
+    border: 1px solid grey; /* Add border */
+    padding: 1rem 2rem; /* Add padding */
+    border-radius: 10px; /* Apply border radius */
+    background-color: azure; /* Set background color */
+    margin-left: 1rem; /* Add left margin */
+}
+
+/* Styling for the Pokemon types heading */
+.pokemon-types h1 {
+    display: inline; /* Display the heading inline */
+}
+
+/* Styling for the section displaying similar Pokemons */
+.similar-pokemons {
+    display: flex; /* Use flex display for flexible layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    margin-top: 5rem; /* Add top margin */
+    text-align: center;
+}
+
+/* Styling for the boxes containing similar Pokemons */
+.pokemon-similar-boxes {
+    display: flex; /* Use flex display for flexible layout */
+    flex-direction: row; /* Arrange children horizontally in a row */
+    flex-wrap: wrap; /* Allow wrapping of items to next line if needed */
+    justify-content: center; /* Center children horizontally within the container */
+}
+
+@media screen and (max-width: 515px) {
+    .similar-pokemons {
+        font-size: 10px;
+    }
+    .pokemon-details-wrapper {
+        margin-top: 15px;
+    }
+.pokemon-detail-name {
+    font-size: xx-large; 
+    letter-spacing: 1rem; 
+}
 }
