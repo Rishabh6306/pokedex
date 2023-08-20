@@ -3,35 +3,12 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import './PokemonDetails.css';
+import usePokemonDetailHook from '../../hooks/usePokemonDetailHook';
 
 function PokemonDetails() {
   // Extract the 'id' parameter from the URL using 'useParams'
   const { id } = useParams();
-  
-  // State to hold Pokemon data
-  let [pokemon, setPokemon] = useState(null);
-  
-  // URL to fetch Pokemon details
-  const POKEMON_DETAIL_URL = 'https://pokeapi.co/api/v2/pokemon/';
-
-  // Function to fetch Pokemon details
-  async function downloadPokemon() {
-    const response = await axios.get(POKEMON_DETAIL_URL + id);
-    let pokemon = response.data;
-    setPokemon({
-      name: pokemon.name,
-      height: pokemon.height,
-      weight: pokemon.weight,
-      types: pokemon.types,
-      image: pokemon.sprites.front_default,
-    });
-  }
-
-  // Fetch Pokemon details on component mount
-  useEffect(() => {
-    downloadPokemon();
-  }, []);
-
+   const [ pokemon ] = usePokemonDetailHook(id)
   return (
     <>
       {/* Link to navigate back to the home page */}
@@ -47,7 +24,7 @@ function PokemonDetails() {
           <div className='pokemon-name'>{pokemon.name}</div>
           {/* Display Pokemon image */}
           <div className='pokemon-image'>
-            <img src={pokemon.image} alt="" />
+            <img src={pokemon.image} alt="img" />
           </div>
           {/* Display Pokemon attributes */}
           <div className='pokemon-atr'>
