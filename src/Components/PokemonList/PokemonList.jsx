@@ -18,10 +18,10 @@ function PokemonList() {
             </div>
             <div className='page-controls'>
                 {/* Button to navigate to previous page */}
-                <button onClick={() => setPokemonListState({...pokemonListState, pokedexUrl: pokemonListState.prevUrl})}>Prev</button>
+                <button disabled={!pokemonListState.prevUrl} onClick={() => setPokemonListState({...pokemonListState, pokedexUrl: pokemonListState.prevUrl})}>Prev</button>
                 
                 {/* Button to navigate to next page */}
-                <button onClick={() => setPokemonListState({...pokemonListState, pokedexUrl: pokemonListState.nextUrl})}>Next</button>
+                <button disabled={!pokemonListState.nextUrl} onClick={() => setPokemonListState({...pokemonListState, pokedexUrl: pokemonListState.nextUrl})}>Next</button>
             </div>
             <div className='pokemon-list'>
                 {/* Map through the Pokemon list and display each Pokemon component */}

@@ -16,7 +16,7 @@ function PokemonDetails({ pokemonName }) {
         <>
         {/* Display the link to return to Pokedex */}
         <h1 >
-            <Link className='pokedex-redirect' to="/">Pokedex</Link>
+            <Link className='pokedex-redirect' to="/">Home &#10169;</Link>
         </h1>
         
         {/* Display the Pokémon details */}
