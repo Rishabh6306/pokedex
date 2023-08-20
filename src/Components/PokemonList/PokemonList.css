@@ -28,3 +28,16 @@
 .page-controls button:hover {
     background-color: sandybrown;
 }
+
+.similar-pokemons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pokemon-similar-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

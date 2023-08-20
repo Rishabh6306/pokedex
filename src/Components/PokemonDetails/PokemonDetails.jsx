@@ -1,14 +1,13 @@
 // Import necessary dependencies
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import './PokemonDetails.css';
 import usePokemonDetailHook from '../../hooks/usePokemonDetailHook';
+import Pokemon from '../Pokemon/Pokemon';
 
 function PokemonDetails() {
   // Extract the 'id' parameter from the URL using 'useParams'
   const { id } = useParams();
-   const [ pokemon ] = usePokemonDetailHook(id)
+  const [pokemon, pokemnListState] = usePokemonDetailHook(id)
   return (
     <>
       {/* Link to navigate back to the home page */}
@@ -46,6 +45,17 @@ function PokemonDetails() {
           </div>
         </div>
       )}
+
+      <div className="similar-pokemons">
+        <h1>Similar Pokimons </h1>
+        <div className="pokemon-similar-boxes">
+          {pokemnListState.pokemnList.length > 0 &&
+            pokemnListState.pokemnList.map((pokemon) => (
+              <Pokemon key={pokemon.id} id={pokemon.id} name={pokemon.name} url={pokemon.image} />
+            ))
+          }
+        </div>
+      </div>
     </>
   );
 }
