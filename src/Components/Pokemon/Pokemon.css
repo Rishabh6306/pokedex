@@ -15,6 +15,7 @@
     height: 300px; /* Set container height */
     max-width: 400px; /* Set maximum container width */
     margin-top: 4rem; /* Add margin to the top of the container */
+    margin-left: 1rem; /* Add margin to the left of the container */
     border: 1px solid black; /* Add a border */
     border-radius: 10px; /* Apply border radius */
     background-color: bisque; /* Set background color */
@@ -40,4 +41,10 @@
     margin-bottom: 1rem; /* Add margin at the bottom */
     margin-top: 1rem; /* Add margin at the top */
     font-weight: bold; /* Apply bold font weight */
+}
+
+@media screen and (max-width: 650px) {
+.pokemon {
+    width: 100vw;
+}
 }
