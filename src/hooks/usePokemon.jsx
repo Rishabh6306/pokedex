@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import downloadPokemons from "../utils/downloadPokemons";
 import { useParams } from "react-router-dom";
-
+ 
 function usePokemon(pokemonName) {
     const { id } = useParams(); // Get the ID from the URL parameters
 
